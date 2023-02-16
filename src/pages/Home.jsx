@@ -6,6 +6,8 @@ import "../Sass/Home.scss"
 
 
 const Home = () => {
+
+let token = localStorage.getItem("token");
   return (
     <div>
       {token ? <Header_user /> : <Header />}
