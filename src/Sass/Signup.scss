@@ -1,0 +1,38 @@
+.bg-font{
+    background-repeat: no-repeat;
+    background-image: url("../assets/Signupp.jpg");
+    background-size: cover;
+    height: 44rem;
+
+   h1{
+    font-size: 60px;
+   }
+   .user{
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 4%;
+
+   }
+    .paragraph{
+        padding: 1px 10px;
+       margin-top: 15px;
+       background-color: rgb(230, 239, 239);
+       height: 2rem;
+       opacity: 0.7;
+       font-weight: 800;
+       border: 1px solid aqua;
+       border-radius: 7px 1px 1px 7px;
+    }
+    .signup-signin{
+        padding: 1px 10px;
+        margin-top: 15px;
+        background-color: rgb(236, 242, 242);
+        height: 2rem;
+        opacity: 0.7;
+       font-weight: 800;
+       border: 1px solid aqua;
+       border-radius: 1px 7px 7px 1px;
+
+    }
+    
+}

@@ -1,0 +1,33 @@
+.homebgimg{
+    width: 100%;
+    height: 88.5vh;
+    background-color: red;
+    background-repeat: no-repeat, repeat;
+    background-image: url("../assets/developer.jpg");
+    background-size: cover;
+   .cent{
+       position: absolute;
+       margin-top: 10%;
+       margin-left: 12%;
+     h1{
+        text-align: center;
+        color: wheat;
+    }
+    span{
+        text-align: center;
+        font-size: 1.8rem;
+        color: wheat;
+        
+    }
+    .button{
+        text-align: center;
+       .btn{
+        width: 100px;
+        margin-right: 15px;
+        margin-top: 40%;
+       }
+    }
+   }
+}
+        
+        
