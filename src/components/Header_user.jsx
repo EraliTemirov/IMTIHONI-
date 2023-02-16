@@ -1,11 +1,15 @@
 import React from "react";
 import "../Sass/Header.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 
 
 const Header_user = () => {
+
+
+   const navigate = useNavigate();
+
   function handleLogout() {
     localStorage.removeItem("token");
     toast("Logged Out", { type: "info" });
