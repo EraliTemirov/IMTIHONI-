@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
 import Header from '../components/Header'
+import Header_user from '../components/Header_user';
 import "../Sass/Home.scss"
 
 
 const Home = () => {
   return (
     <div>
-      
-      <Header />
+      {token ? <Header_user /> : <Header />}
       <div className="homebgimg">
         <div className="cent">
           <h1>Developer Connector</h1>
