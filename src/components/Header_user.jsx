@@ -9,7 +9,7 @@ const Header_user = () => {
   function handleLogout() {
     localStorage.removeItem("token");
     toast("Logged Out", { type: "info" });
-    navigate("/login");
+    navigate("/");
   }
 
   return (
