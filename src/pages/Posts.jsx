@@ -42,28 +42,6 @@ const Posts = ({}) => {
 
    setData([...data]);
   }
-    // useEffect(() => {
-    //   async function Like() {
-    //     try {
-    //       let { data } = await axios.put(`/posts/like/${id}`);
-    //       setData(data);
-    //       console.log(data);
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    //   }
-
-    //   Like();
-    // }, []);
-
-    
-
-
-
-
-  
-
-
 
   return (
     <div>

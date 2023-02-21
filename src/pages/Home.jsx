@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import Header from '../components/Header'
+import Header from '../components/Header';
 import Header_user from '../components/Header_user';
-import "../Sass/Home.scss"
+import "../Sass/Home.scss";
 
 
 const Home = () => {
@@ -34,4 +34,4 @@ let token = localStorage.getItem("token");
   );
 }
 
-export default Home
+export default Home;

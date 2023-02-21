@@ -26,7 +26,7 @@ const Education = () => {
 
     try {
       let { data } = await axios.put("/profile/education", values);
-      
+      console.log(data);
      toast("Success", { type: "success" });
       navigate("/dashboard");
     } catch (error) {

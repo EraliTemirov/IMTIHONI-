@@ -5,7 +5,6 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
-import Loading from "./Loading";
 
 const CreateProfile = () => {
   const [values, setValues] = useState({
@@ -262,7 +261,7 @@ const CreateProfile = () => {
         </form>
       </main>
     </div>
-            );
+   );
 };
 
 export default CreateProfile;

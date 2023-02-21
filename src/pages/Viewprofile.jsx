@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Header_user from "../components/Header_user";
 
+
 const viewprofile = () => {
   const { id } = useParams();
   let token = localStorage.getItem("token");
@@ -19,7 +20,6 @@ const viewprofile = () => {
     async function getdevelop() {
       let { data } = await axios.get(`profile/user/${id}`);
       useData(data);
-      console.log(data);
     }
 
     getdevelop();

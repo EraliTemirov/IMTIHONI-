@@ -6,10 +6,11 @@ import Header from "../components/Header";
 import Header_user from "../components/Header_user";
 import "../Sass/Dashboard.scss";
 
-const Dashboard = () => {
-  let token = localStorage.getItem("token");
 
-  const navigate = useNavigate();
+const Dashboard = () => {  
+  let token = localStorage.getItem("token");
+  
+  const navigate = useNavigate();       
   const [data, setData] = useState();
   const [newdata, setNewdata] = useState();
 
@@ -21,10 +22,10 @@ const Dashboard = () => {
   useEffect(() => {
     async function getMe() {
       try {
-        let { data } = await axios.get("/auth");
-        setData(data);
-
-        //  toast("Success", { type: "success" });
+         let { data } = await axios.get("/auth");
+         setData(data);
+ 
+         //  toast("Success", { type: "success" });
       } catch (error) {}
     }
 
@@ -33,7 +34,7 @@ const Dashboard = () => {
 
   if (handledelete) {
     useEffect(() => {
-      async function getMe() {
+      async function getMen() {
         try {
           let { data } = await axios.get("/profile/me");
           // toast("Sucsess", { type: "success" });
@@ -43,28 +44,24 @@ const Dashboard = () => {
         }
       }
 
-      getMe();
+      getMen();
     }, []);
   }
-  
 
-    function handledelete() {
-      async function getMedelete() {
-        try {
-          await axios.delete("/profile");
-          localStorage.removeItem("token");
-          navigate("/siginup");
-          toast("Delete profile", { type: "warning" });
-        } catch (error) {
-          console.log(error);
-          toast("Error", { type: "error" });
-        }
+  function handledelete() {
+    async function getMedelete() {
+      try {
+        await axios.delete("/profile");
+        localStorage.removeItem("token");
+        navigate("/siginup");
+        toast("Delete profile", { type: "warning" });
+      } catch (error) {
+        console.log(error);
+        toast("Error", { type: "error" });
       }
-      getMedelete();
     }
-  
-
-
+    getMedelete();
+  }
 
   return (
     <div>
@@ -87,7 +84,6 @@ const Dashboard = () => {
           </Link>
         </div>
         <span className="fs-3">Experience Credentials</span>
-
         <table className="table">
           <thead>
             <tr>
@@ -154,6 +150,7 @@ const Dashboard = () => {
         <button onClick={handledelete} className="btn btn-danger mt-5 w-50">
           Delete My Account
         </button>
+        
       </div>
     </div>
   );

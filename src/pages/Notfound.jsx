@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Sass/Notfound.scss"
+import "../Sass/Notfound.scss";
 
 const Notfound = () => {
   return (
@@ -9,4 +9,4 @@ const Notfound = () => {
   )
 }
 
-export default Notfound
+export default Notfound;

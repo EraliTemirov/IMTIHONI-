@@ -7,10 +7,7 @@ import { Link } from 'react-router-dom';
 import { toast } from "react-toastify";
 
 const DashboardCreate = () => {
-
-  
   const [data, setData] = useState();
-
   useEffect(() => {
     async function getMe() {
       try {
@@ -18,7 +15,6 @@ const DashboardCreate = () => {
      toast(message, { type: "success" });
         setData(data);
       } catch (error) {
-    //  toast("Error", { type: "error" });
       }
     }
 

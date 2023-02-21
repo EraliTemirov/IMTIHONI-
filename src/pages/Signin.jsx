@@ -13,11 +13,6 @@ const Signin = () => {
 
   const navigate = useNavigate();
 
-  //  useEffect(()=>{
-  //   let token =localStorage.getItem("token");
-  //   if(token)
-  //   navigate("/developers");
-  //  })
 
   async function handleLogen(e) {
     e.preventDefault();

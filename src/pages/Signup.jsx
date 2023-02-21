@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Header from "../components/Header";
-import "../Sass/Signup.scss"
+import "../Sass/Signup.scss";
 
 const Signup = () => {
 
@@ -16,11 +16,6 @@ const Signup = () => {
 
  const navigate =useNavigate()
 
-//  useEffect(()=>{
-//   let token =localStorage.getItem("token");
-//   if(token) 
-//   navigate("/developers");
-//  })
 
   async function handleRegister(e){
     e.preventDefault();

@@ -21,12 +21,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="text-decoration-none color">
+              <Link to="/siginup" className="text-decoration-none color">
                 Register
               </Link>
             </li>
             <li>
-              <Link to="/" className="text-decoration-none color">
+              <Link to="/siginin" className="text-decoration-none color">
                 Login
               </Link>
             </li>

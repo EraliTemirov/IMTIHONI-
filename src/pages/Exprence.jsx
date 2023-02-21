@@ -25,7 +25,7 @@ let token = localStorage.getItem("token");
 
    try {
      let { data } = await axios.put("/profile/experience", values);
-    // console.log(data);
+     console.log(data);
     toast("Success", { type: "success" });
     navigate("/dashboard");
    } catch (error) {

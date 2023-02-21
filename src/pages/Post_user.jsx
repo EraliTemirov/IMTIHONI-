@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Header_user from "../components/Header_user";
-import avatar from "../assets/developer.jpg"
+import avatar from "../assets/developer.jpg";
 import { Link } from "react-router-dom";
-import "../Sass/Posts.scss"
+import "../Sass/Posts.scss";
 
 const Post_user = () => {
 let token = localStorage.getItem("token");

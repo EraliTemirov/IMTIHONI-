@@ -33,11 +33,6 @@ async function getMe(){
 getMe();
 },[])
 
-  
-
-
-
-
   return (
     <div>
       {token ? <Header_user /> : <Header />}
