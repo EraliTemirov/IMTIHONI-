@@ -53,7 +53,7 @@ const Posts = ({}) => {
         </p>
         <Createpost />
         {data?.map(({ name, text, date, avatar, likes, _id ,user}) => (
-          <div
+          <div key={_id}
             data-user-id={_id}
             className="container border border-primary p-4 d-flex justify-content-between mb-4"
           >

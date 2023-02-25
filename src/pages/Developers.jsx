@@ -39,10 +39,11 @@ getMe();
       <div className="container w-75">
         <h1>Developers </h1>
         <p> Browse and connect with developers</p>
-        {data?.map(({ user, company, skills }) => (
+        {data?.map(({ user, company, skills ,index}) => (
           <div
+          
+          key={index}
             className="border border-primary d-flex justify-content-between mb-4 p-3"
-            key={user?.id}
           >
             <div className="d-flex">
               <img src={user?.avatar} alt="user_img" className="user" />
