@@ -17,7 +17,6 @@ const Posts = ({}) => {
  })
 
   const [data, setData] = useState();
-
   useEffect(() => {
     async function getMe() {
       try {
@@ -27,22 +26,16 @@ const Posts = ({}) => {
        toast("Error", { type: "error" });
       }
     }
-
     getMe();
   }, []);
 
 
   function handlelike(evt) {
-
     let userNum = evt.target.parentNode.dataset.userId;
-
    let findUser = data.find(el => el._id == userNum);
-
    findUser.likes = [...findUser.likes, {_id:'leriuvlriuqvlqiuv'} ];
-
    setData([...data]);
   }
-
   return (
     <div>
     {token?<Header_user/> : <Header/>}
@@ -53,7 +46,7 @@ const Posts = ({}) => {
         </p>
         <Createpost />
         {data?.map(({ name, text, date, avatar, likes, _id ,user}) => (
-          <div key={_id}
+          <div
             data-user-id={_id}
             className="container border border-primary p-4 d-flex justify-content-between mb-4"
           >

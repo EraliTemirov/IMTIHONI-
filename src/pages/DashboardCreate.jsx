@@ -18,9 +18,9 @@ const DashboardCreate = () => {
       }
     }
 
+    
     getMe();
   }, []);
-
 
   return (
     <div>

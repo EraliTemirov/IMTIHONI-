@@ -23,10 +23,8 @@ const CreateProfile = () => {
   });
   
   const navigate = useNavigate();
-
   async function handleCreate(e) {
     e.preventDefault();
-
     try {
       let { data } = await axios.post("/profile", values);
        console.log(data);
