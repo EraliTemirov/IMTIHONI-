@@ -1,5 +1,4 @@
 import React from "react";
-import "../Sass/Header.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
@@ -16,27 +15,26 @@ const Header_user = () => {
   }
 
   return (
-    <div className="header-bg">
-      <nav className="container d-flex justify-content-between">
-        <Link to="/">
-          <img src={Logo} alt="logo" className="img" />
+    <div className="bg-primary p-2 ">
+      <nav className="w-75 container d-flex justify-content-between">
+        <Link to="/" className='link d-flex justify-content-center w-25 p-2'>
+          <img src={Logo} alt="logo" className="w-100" />
         </Link>
-        <div>
-          <ul className="d-flex ">
-            <li>
-              <Link to="/developers" className="text-decoration-none color">
+        <div className='w-25 p-0'>
+          <ul className="d-flex  justify-content-around ">
+            <li className='fs-4 p-1'>
+              <Link to="/developers" className="text-decoration-none text-light">
                 Developers
               </Link>
             </li>
-            <li>
-              <Link to="/posts" className="text-decoration-none color">
-                Posts
+            <li className='fs-4 p-1'>
+              <Link to="/siginup" className="text-decoration-none text-light">
+                Register
               </Link>
             </li>
-            <li>
-              <Link to="/dashboard" className="text-decoration-none color">
-                <i className="fa-solid fa-user"></i>
-                Dashboard
+            <li className='fs-4 p-1'>
+              <Link to="/siginin" className="text-decoration-none text-light">
+                Login
               </Link>
             </li>
             <li>
@@ -47,8 +45,11 @@ const Header_user = () => {
           </ul>
         </div>
       </nav>
+      
     </div>
   );
 };
 
 export default Header_user;
+
+
