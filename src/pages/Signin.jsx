@@ -23,8 +23,8 @@ const Signin = () => {
       } = await axios.post("/auth", values);
 
       localStorage.setItem("token", token);
-      navigate("/developers");
       toast("Success", { type: "info" });
+      navigate("/developers");
     } catch (error) {
       toast("Error", { type: "error" });
     }

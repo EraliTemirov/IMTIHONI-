@@ -21,16 +21,20 @@ const Signup = () => {
     e.preventDefault();
 
     if (values.password!==values.confirmpassword)
-    return   toast("Paswords do not match ", {type:"error"});
 
-    try {
-      
-     let { data:{token, message}, } = await axios.post("/users", values);
+    var { data:{token, message}, } = await axios.post("/users", values);
 
+     
      localStorage.setItem("token", token);
      toast (message, {type:"success"})
      navigate("/dashboardcreate");
      toast("Success", {type:"success"})
+     console.log(data);
+
+
+    try {
+      return   toast("Paswords do not match ", {type:"error"});
+     
     } catch (error) {
       toast(error.response.data.errors[0].msg, {type: "error"});
     }
@@ -74,7 +78,7 @@ const Signup = () => {
           values={values.email}
           onChange={handelInputChange}
         />
-        <p className="text-light mt-1">
+        <p className="text-info-emphasis mt-1">
           This site uses Gravatar so if you want a profile image, use a Gravatar
           email
         </p>

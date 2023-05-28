@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import Header from "../components/Header";
 
 const CreateProfile = () => {
+  
   const [values, setValues] = useState({
     company: "",
     website: "",
@@ -23,16 +24,17 @@ const CreateProfile = () => {
   });
   
   const navigate = useNavigate();
-  async function handleCreate(e) {
+  
+  async function handleCreate() {
     e.preventDefault();
+
     try {
       let { data } = await axios.post("/profile", values);
-       console.log(data);
-       navigate("/dashboard");
-       toast("Create your profile", { type: "success" });
-
+      console.log(data);
+      navigate("/dashboard");
+      toast("Create your profile", { type: "success" });
     } catch (error) {
-       toast("error", { type: "error" });
+      toast("error", { type: "error" });
     }
   }
 
@@ -44,9 +46,11 @@ const CreateProfile = () => {
   }
 
   const [open, setOpen] = useState(false);
+
   function handleToggleSidebar() {
     setOpen(!open);
   }
+
   return (
     <div>
       <Header />
@@ -56,8 +60,7 @@ const CreateProfile = () => {
             Create Your Profile
           </h1>
           <p className=" fw-3 text-dark fs-3 ">
-            <i className="fa-solid fa-user mx-2"></i>Let's get some information
-            to make your
+            <i className="fa-solid fa-user mx-2"></i>Let's get some information to make your
           </p>
 
           <p className="small disable">* = required field</p>
@@ -70,7 +73,7 @@ const CreateProfile = () => {
               value={values.status}
               onChange={handleInputChange}
             >
-              <option selected disabled>
+              <option disabled>
                 * Select Professional Status
               </option>
               <option value="Developer">Developer</option>
@@ -144,7 +147,7 @@ const CreateProfile = () => {
               onChange={handleInputChange}
             />
             <p className="small disable">
-              Please use comma separated values (eg. HTML,CSS,JavaScript,PHP
+              Please use comma separated values (eg. HTML, CSS, JavaScript, PHP)
             </p>
           </div>
 
@@ -159,16 +162,12 @@ const CreateProfile = () => {
               onChange={handleInputChange}
             />
             <p className="disable">
-              If you want your latest repos and a Github link, include your
-              username
+              If you want your latest repos and a Github link, include your username
             </p>
           </div>
 
           <div className="my-1">
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Control
                 name="bio"
                 value={values.bio}
@@ -190,15 +189,16 @@ const CreateProfile = () => {
             >
               Add Social Network Links
             </button>
-            <span>Optional</span>
+            <span className="optional">Optional</span>
           </div>
+
           {open && (
             <aside>
               <div className="my-3 d-flex social-input">
                 <i className="fab  text-info fa-twitter fa-2x" />
                 <input
                   type="text"
-                  placeholder="Twitter UR L"
+                  placeholder="Twitter URL"
                   name="twitter"
                   className="form-control mx-3"
                   value={values.twitter}
@@ -209,7 +209,7 @@ const CreateProfile = () => {
                 <i className="fab text-primary  fa-facebook fa-2x" />
                 <input
                   type="text"
-                  placeholder="Facebook U RL"
+                  placeholder="Facebook URL"
                   name="facebook"
                   className="form-control mx-3"
                   value={values.facebook}
@@ -220,7 +220,7 @@ const CreateProfile = () => {
                 <i className="fab text-danger  fa-youtube fa-2x" />
                 <input
                   type="text"
-                  placeholder="YouTube UR L"
+                  placeholder="YouTube URL"
                   name="youtube"
                   className="form-control mx-3"
                   value={values.youtube}
@@ -232,7 +232,7 @@ const CreateProfile = () => {
                 <input
                   type="text"
                   className="form-control mx-3"
-                  placeholder="Linkedin URL"
+                  placeholder="LinkedIn URL"
                   name="linkedin"
                   value={values.linkedin}
                   onChange={handleInputChange}
@@ -259,7 +259,7 @@ const CreateProfile = () => {
         </form>
       </main>
     </div>
-   );
+  );
 };
 
 export default CreateProfile;

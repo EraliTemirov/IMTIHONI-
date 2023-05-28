@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
+import {toast} from "react-toastify"
 
 
 
@@ -12,6 +13,7 @@ const Header_user = () => {
     localStorage.removeItem("token");
     toast("Logged Out", { type: "info" });
     navigate("/");
+    handleLogout();
   }
 
   return (
